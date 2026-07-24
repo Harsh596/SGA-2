@@ -1,0 +1,2 @@
+Commands executed: gcc file_utility.c -o file_utility && ./file_utility
+Explanation: I used open() to create the file, write() to add records, and lseek() to move the file cursor back to the start so I could overwrite the specific record efficiently without loading the whole file. Finally, read() fetched the updated data and close() safely released the file descriptor. I observed the record update flawlessly on disk.

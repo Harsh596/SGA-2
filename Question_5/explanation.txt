@@ -1,0 +1,2 @@
+Commands executed: vi critical_config.conf (simulated crash), followed by vi -r critical_config.conf
+Explanation: I simulated a system crash and used the -r flag to recover the unsaved buffer. The most reliable recovery strategy is the swap file (.swp) because it saves buffer changes directly to the physical disk periodically. Unlike undo history or registers, which are stored in RAM and wiped during a crash, swap files survive reboots.

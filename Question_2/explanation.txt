@@ -1,0 +1,2 @@
+Commands executed: gcc server_monitor.c -o server_monitor && ./server_monitor
+Explanation: I used fork() to create child processes and kill() with SIGTERM to terminate unresponsive ones. The signal() function caught the SIGCHLD signal, and waitpid() cleared the process table, preventing zombies. I observed the parent successfully kill the simulated hanging child.

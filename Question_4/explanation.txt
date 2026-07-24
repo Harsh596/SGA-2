@@ -1,0 +1,2 @@
+Command executed: tail -f dummy_syslog.log 2>/dev/null | grep --line-buffered "ERROR" | tee -a error_report.txt
+Explanation: I used tail -f for real-time monitoring and 2>/dev/null to suppress permission errors. The pipe (|) sent this stream to grep to extract errors, and tee -a simultaneously displayed the output and saved it to a file. I observed the pipeline efficiently extract only the ERROR line.

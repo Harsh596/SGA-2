@@ -1,0 +1,2 @@
+Commands executed: chmod +x process_submissions.sh && ./process_submissions.sh
+Explanation: I used a for-loop and md5sum to hash file contents to identify duplicates. I used 2>> to redirect standard error to a separate log file, and cp to handle file backups, generating a final tally in report.txt. I observed the script successfully backed up only the unique files.
